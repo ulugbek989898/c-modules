@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/29 19:11:32 by uisroilo          #+#    #+#             */
-/*   Updated: 2022/12/29 19:12:08 by uisroilo         ###   ########.fr       */
+/*   Created: 2022/12/29 22:36:25 by uisroilo          #+#    #+#             */
+/*   Updated: 2022/12/29 22:42:52 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-void	showSelection()
+#include "Contact.hpp"
+#include <string>
+
+class PhoneBook
 {
+private:
+	Contact	contacts[8];
+	/* data */
+public:
+	void	addContact();
+	PhoneBook(/* args */);
+	~PhoneBook();
+};
 
+PhoneBook::PhoneBook(/* args */)
+{
 }
 
-int	main()
+PhoneBook::~PhoneBook()
 {
-
 }
+#endif
