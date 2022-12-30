@@ -6,7 +6,7 @@
 #    By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/29 21:06:10 by uisroilo          #+#    #+#              #
-#    Updated: 2022/12/29 22:18:59 by uisroilo         ###   ########.fr        #
+#    Updated: 2022/12/30 02:07:23 by uisroilo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	=	PhoneBook
 CC		=	c++
 CFLAGS	=	-std=c++98 -Wall -Wextra -Werror
 
-SRCS	=	PhoneBook.cpp \
+SRCS	=	PhoneBook.cpp Contact.cpp \
 
 all		:	$(NAME)
 

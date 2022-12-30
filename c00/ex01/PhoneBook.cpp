@@ -6,7 +6,7 @@
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 19:11:32 by uisroilo          #+#    #+#             */
-/*   Updated: 2022/12/29 22:48:31 by uisroilo         ###   ########.fr       */
+/*   Updated: 2022/12/30 02:06:22 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,33 +35,26 @@ void	showSelection()
 	std::cout<< std::endl;
 }
 
-void	Contact::setContact()
-{
-	std::cout << "Please enter your first name: ";
-	std::cin >> f_name;
-	std::cout << "Please enter your last name: ";
-	std::cin >> l_name;
-	std::cout << "Please enter your nick name: ";
-	std::cin >> nick_name;
-	std::cout << "Please enter your phone number: ";
-	std::cin >> phone_num;
-	std::cout << "Please enter your darkest secret: ";
-	std::cin >> darkest_sec;
-}
-
-void	Contact::getContact() const
-{
-	std::cout << "Your name is " << f_name;
-	std::cout << ", Your last name is " << l_name;
-	std::cout << ", Your nick name is " << nick_name;
-	std::cout << ", Your phone number is " << phone_num;
-	std::cout << ", Your darkest secret is " << darkest_sec;
-}
 
 void	PhoneBook::addContact()
 {
-	contacts[0].setContact();
-	contacts[0].getContact();
+	static	int	i;
+	contacts[i % 8].setContact();
+	contacts[i % 8].setIndex(i % 8);
+	i++;
+}
+
+void	PhoneBook::printContacts() const
+{
+	int	i;
+
+	i = 0;
+	std::cout << "------------- PHONBOOK CONTACTS -------------" << std::endl;
+	while (i < 8)
+	{
+		contacts[i].getContact();
+		i++;
+	}
 }
 
 int	main()
@@ -70,13 +63,21 @@ int	main()
 	std::string	choice;
 
 	showSelection();
-	std::cout<<"Enter your choice."<<std::endl;
-	std::cout<<">";
-	std::cin >> choice;
-	std::cout << "Your choice is " << choice << std::endl;
+	while (1)
+	{
+		std::cout<<"Enter your choice."<<std::endl;
+		std::cout<<">";
+		std::cin >> choice;
+		std::cout << "Your choice is " << choice << std::endl;
 
-	if (choice.compare("ADD") == 0)
-		book.addContact();
-
+		if (choice.compare("ADD") == 0)
+			book.addContact();
+		else if (choice.compare("SEARCH") == 0)
+			book.printContacts();
+		else if (choice.compare("EXIT") == 0)
+			break;
+		else
+			std::cout << "You entered wrong choice try again!" << std::endl;
+	}
 
 }

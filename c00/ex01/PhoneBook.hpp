@@ -6,7 +6,7 @@
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 22:36:25 by uisroilo          #+#    #+#             */
-/*   Updated: 2022/12/29 22:42:52 by uisroilo         ###   ########.fr       */
+/*   Updated: 2022/12/30 02:08:06 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,12 @@ private:
 	/* data */
 public:
 	void	addContact();
-	PhoneBook(/* args */);
+	void	printContacts() const;
+	PhoneBook();
 	~PhoneBook();
 };
 
-PhoneBook::PhoneBook(/* args */)
+PhoneBook::PhoneBook()
 {
 }
 
