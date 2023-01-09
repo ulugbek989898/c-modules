@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/29 22:35:51 by uisroilo          #+#    #+#             */
-/*   Updated: 2022/12/30 14:36:03 by uisroilo         ###   ########.fr       */
+/*   Created: 2023/01/03 11:30:12 by uisroilo          #+#    #+#             */
+/*   Updated: 2023/01/03 11:37:54 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
 #include <iostream>
-#include <iomanip>
-#include <string>
 
-class Contact
+class Weapon
 {
 private:
-	std::string	f_name;
-	std::string	l_name;
-	std::string	nick_name;
-	std::string	phone_num;
-	std::string	darkest_sec;
-	int			index;
+	std::string	type;
 public:
-	void	setContact();
-	void	setIndex(int i);
-	void	getContact() const;
-	void	display(int index) const;
-	Contact();
-	~Contact();
+	Weapon(std::string typeStr);
+	~Weapon();
+	void	setType(std::string typeStr);
+	const std::string   &getType() const;
 };
 
 #endif

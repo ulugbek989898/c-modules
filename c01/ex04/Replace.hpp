@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/29 22:35:51 by uisroilo          #+#    #+#             */
-/*   Updated: 2022/12/30 14:36:03 by uisroilo         ###   ########.fr       */
+/*   Created: 2023/01/03 16:20:58 by uisroilo          #+#    #+#             */
+/*   Updated: 2023/01/03 16:25:12 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
-
 #include <iostream>
-#include <iomanip>
-#include <string>
 
-class Contact
+#ifndef REPLACE_HPP
+# define REPLACE_HPP
+
+class Replace
 {
 private:
-	std::string	f_name;
-	std::string	l_name;
-	std::string	nick_name;
-	std::string	phone_num;
-	std::string	darkest_sec;
-	int			index;
+	std::string	_fileName;
+	std::string	_s1;
+	std::string	_s2;
 public:
-	void	setContact();
-	void	setIndex(int i);
-	void	getContact() const;
-	void	display(int index) const;
-	Contact();
-	~Contact();
+	Replace(std::string fileName, std::string s1, std::string s2);
+	~Replace();
+	void	replace();
 };
 
 #endif

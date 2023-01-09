@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/29 22:35:51 by uisroilo          #+#    #+#             */
-/*   Updated: 2022/12/30 14:36:03 by uisroilo         ###   ########.fr       */
+/*   Created: 2023/01/03 12:04:28 by uisroilo          #+#    #+#             */
+/*   Updated: 2023/01/03 12:18:58 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-#include <iostream>
-#include <iomanip>
-#include <string>
+#include "Weapon.hpp"
 
-class Contact
+class HumanB
 {
 private:
-	std::string	f_name;
-	std::string	l_name;
-	std::string	nick_name;
-	std::string	phone_num;
-	std::string	darkest_sec;
-	int			index;
+	std::string	_name;
+	Weapon		*_weapon;
 public:
-	void	setContact();
-	void	setIndex(int i);
-	void	getContact() const;
-	void	display(int index) const;
-	Contact();
-	~Contact();
+	HumanB(std::string nameStr);
+	~HumanB();
+	void	setWeapon(Weapon &_weapon);
+	void	attack() const;
 };
 
 #endif

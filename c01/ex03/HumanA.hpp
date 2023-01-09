@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/29 22:35:51 by uisroilo          #+#    #+#             */
-/*   Updated: 2022/12/30 14:36:03 by uisroilo         ###   ########.fr       */
+/*   Created: 2023/01/03 11:45:32 by uisroilo          #+#    #+#             */
+/*   Updated: 2023/01/03 11:52:26 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-#include <iostream>
-#include <iomanip>
-#include <string>
+#include "Weapon.hpp"
 
-class Contact
+class HumanA
 {
 private:
-	std::string	f_name;
-	std::string	l_name;
-	std::string	nick_name;
-	std::string	phone_num;
-	std::string	darkest_sec;
-	int			index;
+	std::string	_name;
+	Weapon		&_weapon;
 public:
-	void	setContact();
-	void	setIndex(int i);
-	void	getContact() const;
-	void	display(int index) const;
-	Contact();
-	~Contact();
+	HumanA(std::string nameStr, Weapon &_weapon);
+	~HumanA();
+	void	attack() const;
 };
 
 #endif
