@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 17:10:42 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/01/10 08:05:24 by uisroilo         ###   ########.fr       */
+/*   Created: 2023/01/12 07:46:45 by uisroilo          #+#    #+#             */
+/*   Updated: 2023/01/12 09:23:17 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "ClapTrap.hpp"
 
-class Fixed
+int	main()
 {
-private:
-	int					num;
-	static const int	fractionalBits = 8;
-public:
-	Fixed();
-	Fixed(const Fixed &otherObject);
-	Fixed & operator=(Fixed const &otherObject);
-	~Fixed();
-	int		getValue () const;
-	int		getRawBits (void) const;
-	void	setRawBits (int const raw);
-};
+	ClapTrap	clap("Ulugbek");
+	ClapTrap	trap(clap);
+	
+	std::cout << trap.getStrValue() << std::endl;
+	for(int i = 0; i < 4; i++)
+	{
+		clap.attack("Enemy");
+	}
+	clap.beRepaired(4);
+	clap.takeDamage(6);
+	clap.takeDamage(6);
+	clap.takeDamage(6);
+	clap.takeDamage(6);
+	
+}

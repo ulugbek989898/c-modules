@@ -6,7 +6,7 @@
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 17:20:46 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/01/10 07:40:58 by uisroilo         ###   ########.fr       */
+/*   Updated: 2023/01/11 09:16:54 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,32 @@ void	Fixed::setRawBits(int const raw)
 {
 	std::cout << "setRawBits member function called" << std::endl;
 	num = raw;
+}
+
+Fixed::Fixed(const int n)
+{
+	std::cout << "Int constructor called" << std::endl;
+	num = n << fractionalBits;
+}
+
+Fixed::Fixed(const float n)
+{
+	std::cout << "Float constructor called" << std::endl;
+	num = std::roundf(n * (1 << fractionalBits));
+}
+
+int	Fixed::toInt() const
+{
+	return (num >> fractionalBits);
+}
+
+float	Fixed::toFloat() const
+{
+	return static_cast<float>(num) / (1 << fractionalBits);
+}
+
+std::ostream &operator<<(std::ostream &out, const Fixed &Fixed)
+{
+	out << Fixed.toFloat();
+	return out;
 }

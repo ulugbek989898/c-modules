@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 17:10:42 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/01/10 08:05:24 by uisroilo         ###   ########.fr       */
+/*   Created: 2023/01/16 07:34:53 by uisroilo          #+#    #+#             */
+/*   Updated: 2023/01/17 13:37:34 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-class Fixed
+#include <iostream>
+#include <string>
+
+class Animal
 {
-private:
-	int					num;
-	static const int	fractionalBits = 8;
+protected:
+	std::string	type;
 public:
-	Fixed();
-	Fixed(const Fixed &otherObject);
-	Fixed & operator=(Fixed const &otherObject);
-	~Fixed();
-	int		getValue () const;
-	int		getRawBits (void) const;
-	void	setRawBits (int const raw);
+	Animal();
+	Animal(std::string str);
+	Animal(Animal const &otherObject);
+	Animal &operator=(const Animal &otherObject);
+	virtual	~Animal();
+	std::string		getType() const;
+	virtual	void	makeSound() const = 0;
 };
+
+#endif

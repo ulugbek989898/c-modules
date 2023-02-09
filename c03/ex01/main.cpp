@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 17:10:42 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/01/10 08:05:24 by uisroilo         ###   ########.fr       */
+/*   Created: 2023/01/12 07:46:45 by uisroilo          #+#    #+#             */
+/*   Updated: 2023/01/14 09:11:15 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "ScavTrap.hpp"
 
-class Fixed
+int	main()
 {
-private:
-	int					num;
-	static const int	fractionalBits = 8;
-public:
-	Fixed();
-	Fixed(const Fixed &otherObject);
-	Fixed & operator=(Fixed const &otherObject);
-	~Fixed();
-	int		getValue () const;
-	int		getRawBits (void) const;
-	void	setRawBits (int const raw);
-};
+	// ClapTrap	trappp("KAmol");
+	ScavTrap	trap("Ulugbek");
+
+	// std::cout << std::endl;
+	// trap.attack("Enemy");
+	// std::cout << std::endl;
+	// trappp.attack("Enenmy1");
+	// trap.takeDamage(80);
+	// trap.beRepaired(30);
+	// trap.takeDamage(49);
+	// trap.guardGate();
+	// trap.beRepaired(200);
+	// std::cout << std::endl;
+}

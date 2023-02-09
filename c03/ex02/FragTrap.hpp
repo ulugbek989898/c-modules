@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 17:10:42 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/01/10 08:05:24 by uisroilo         ###   ########.fr       */
+/*   Created: 2023/01/14 08:37:59 by uisroilo          #+#    #+#             */
+/*   Updated: 2023/01/14 09:16:20 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-class Fixed
+#include "ClapTrap.hpp"
+
+class FragTrap: public ClapTrap
 {
-private:
-	int					num;
-	static const int	fractionalBits = 8;
 public:
-	Fixed();
-	Fixed(const Fixed &otherObject);
-	Fixed & operator=(Fixed const &otherObject);
-	~Fixed();
-	int		getValue () const;
-	int		getRawBits (void) const;
-	void	setRawBits (int const raw);
+	FragTrap();
+	~FragTrap();
+	FragTrap(std::string str);
+	FragTrap(const FragTrap &otherObject);
+	FragTrap &operator=(FragTrap const &otherObject);
+
+	void	attack(const std::string &target);
+	void	highFivesGuys();
 };
+
+std::ostream &operator << (std::ostream &out, const FragTrap &fragTrap);
+
+#endif

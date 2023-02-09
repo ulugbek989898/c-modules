@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 17:10:42 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/01/10 08:05:24 by uisroilo         ###   ########.fr       */
+/*   Created: 2023/01/16 16:13:16 by uisroilo          #+#    #+#             */
+/*   Updated: 2023/01/16 17:55:29 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-class Fixed
+#include <iostream>
+#include <string>
+#include <sstream>
+
+class Brain
 {
 private:
-	int					num;
-	static const int	fractionalBits = 8;
+	std::string	ideas[100];
 public:
-	Fixed();
-	Fixed(const Fixed &otherObject);
-	Fixed & operator=(Fixed const &otherObject);
-	~Fixed();
-	int		getValue () const;
-	int		getRawBits (void) const;
-	void	setRawBits (int const raw);
+	Brain();
+	Brain(const Brain &otherObject);
+	Brain &operator=(const Brain &otherObject);
+	~Brain();
+	void	setIdeas(std::string str, int num);
+	void	printIdeas(int num) const;
 };
+
+
+#endif
