@@ -1,9 +1,10 @@
-NAME	=	ex02
+NAME	=	ex03
 CXX		=	c++
 CPPFLAGS	=	-std=c++98 -Wall -Wextra -Werror
 
 SRCS	=	main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp \
-			RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+			RobotomyRequestForm.cpp PresidentialPardonForm.cpp\
+			Intern.cpp
 
 OBJ = $(SRCS:.cpp=.o)
 

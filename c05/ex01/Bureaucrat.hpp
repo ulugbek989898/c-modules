@@ -6,7 +6,7 @@
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:28:37 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/02/09 14:00:25 by uisroilo         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:30:45 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ public:
 	void				increment(int amount);
 	void				decrement(int amount);
 	void				signForm(Form &form);
-	void				executeForm(Form const &form);
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat);

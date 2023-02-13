@@ -6,58 +6,80 @@
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 16:47:35 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/02/09 14:32:24 by uisroilo         ###   ########.fr       */
+/*   Updated: 2023/02/11 16:21:59 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int	main()
 {
 	try {
-		Form obj1;
-		std::cout << obj1;
+		std::cout << "--- Test ShrubberyCreationForm ---" << std::endl;
+		std::cout << std::endl;
+		Bureaucrat b1("b1", 11);
+		ShrubberyCreationForm shrubbery("B02");
+		std::cout << shrubbery << std::endl;
+		b1.signForm(shrubbery);
+		b1.executeForm(shrubbery);
+		std::cout << std::endl;
+		std::cout << "--- Test ShrubberyCreationForm Finish ---" << std::endl;
 	}
 	catch(const std::exception& e) {
 		std::cout << e.what() << std::endl;
+		std::cout << std::endl;
+		std::cout << "--- 1Test ShrubberyCreationForm Finish ---" << std::endl;
 	}
 	// try {
-	// 	Form obj1("B2", 11, -11);
-	// 	std::cout << obj1;
+	// 	std::cout << "--- Test ShrubberyCreationForm ---" << std::endl;
+	// 	std::cout << std::endl;
+	// 	Bureaucrat b1("b1", 149);
+	// 	ShrubberyCreationForm shrubbery("B02");
+	// 	std::cout << shrubbery << std::endl;
+	// 	b1.signForm(shrubbery);
+	// 	b1.executeForm(shrubbery);
+	// 	std::cout << std::endl;
+	// 	std::cout << "--- Test ShrubberyCreationForm Finish ---" << std::endl;
 	// }
 	// catch(const std::exception& e) {
 	// 	std::cout << e.what() << std::endl;
-	// }
-
-	// try {
-	// 	Form obj1("A520", 11, 11);
-	// 	Form obj2(obj1);
-	// 	std::cout << obj2;
-	// }
-	// catch(const std::exception& e) {
-	// 	std::cout << e.what() << std::endl;
-	// }
-	
-	// try {
-	// 	Bureaucrat obj1("enemy2", 20);
-	// 	std::cout <<obj1;
-	// 	Form	obj2("W2", 30, 40);
-	// 	std::cout << obj2;
-	// 	obj2.beSigned(obj1);
-	// 	std::cout << obj2;
-	// 	obj1.signForm(obj2);
-	// }
-	// catch(const std::exception& e) {
-	// 	std::cout << e.what() << std::endl;
+	// 	std::cout << std::endl;
+	// 	std::cout << "--- 1Test ShrubberyCreationForm Finish ---" << std::endl;
 	// }
 	// try {
-	// 	Bureaucrat obj1("enemy2", 20);
-	// 	std::cout <<obj1;
-	// 	Form	obj2("W2", 10, 40);
-	// 	std::cout << obj2;
-	// 	obj1.signForm(obj2);
+	// 	std::cout << "--- Test RobotomyRequestForm ---" << std::endl;
+	// 	std::cout << std::endl;
+	// 	Bureaucrat b1("b1", 50);
+	// 	RobotomyRequestForm robo("Robotomy");
+	// 	std::cout << robo << std::endl;
+	// 	b1.signForm(robo);
+	// 	b1.executeForm(robo);
+	// 	b1.executeForm(robo);
+	// 	b1.executeForm(robo);
+	// 	std::cout << std::endl;
+	// 	std::cout << "--- Test RobotomyRequestForm Finish ---" << std::endl;
 	// }
 	// catch(const std::exception& e) {
 	// 	std::cout << e.what() << std::endl;
+	// 	std::cout << std::endl;
+	// 	std::cout << "--- 1Test RobotomyRequestForm Finish ---" << std::endl;
+	// }
+	// try {
+	// 	std::cout << "--- Test PresidentialPardonForm ---" << std::endl;
+	// 	std::cout << std::endl;
+	// 	Bureaucrat b1("b1", 2);
+	// 	PresidentialPardonForm pres("presidential");
+	// 	std::cout << pres << std::endl;
+	// 	// b1.signForm(pres);
+	// 	b1.executeForm(pres);
+	// 	std::cout << std::endl;
+	// 	std::cout << "--- Test PresidentialPardonForm Finish ---" << std::endl;
+	// }
+	// catch(const std::exception& e) {
+	// 	std::cout << e.what() << std::endl;
+	// 	std::cout << std::endl;
+	// 	std::cout << "--- 1Test PresidentialPardonForm Finish ---" << std::endl;
 	// }
 }
