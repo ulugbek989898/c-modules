@@ -6,7 +6,7 @@
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:28:37 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/02/06 13:57:49 by uisroilo         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:33:42 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ public:
 
 	const	std::string	getName(void) const;
 	int					getGrade(void) const;
-	void				increment(int amount);
-	void				decrement(int amount);
+	void				increment(void);
+	void				decrement(void);
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat);

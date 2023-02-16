@@ -6,7 +6,7 @@
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:28:37 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/02/09 15:30:45 by uisroilo         ###   ########.fr       */
+/*   Updated: 2023/02/13 17:01:51 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ public:
 
 	const	std::string	getName(void) const;
 	int					getGrade(void) const;
-	void				increment(int amount);
-	void				decrement(int amount);
+	void				increment(void);
+	void				decrement(void);
 	void				signForm(Form &form);
 };
 

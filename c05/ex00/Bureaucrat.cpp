@@ -6,7 +6,7 @@
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:30:31 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/02/06 14:13:53 by uisroilo         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:34:08 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,16 +45,16 @@ int	Bureaucrat::getGrade(void) const {
 	return c_grade;
 }
 
-void	Bureaucrat::increment(int amount) {
-	if (c_grade - amount < 1)
+void	Bureaucrat::increment(void) {
+	if (c_grade - 1 < 1)
 		throw Bureaucrat::GradeTooHighException();
-	c_grade -= amount;
+	c_grade -= 1;
 }
 
-void	Bureaucrat::decrement(int amount) {
-	if (c_grade + amount > 150)
+void	Bureaucrat::decrement(void) {
+	if (c_grade + 1 > 150)
 		throw Bureaucrat::GradeTooLowException();
-	c_grade += amount;
+	c_grade += 1;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &otherObj) : c_name(otherObj.c_name) {
