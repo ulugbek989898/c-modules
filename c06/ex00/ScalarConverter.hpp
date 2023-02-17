@@ -6,7 +6,7 @@
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 18:57:39 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/02/16 18:51:51 by uisroilo         ###   ########.fr       */
+/*   Updated: 2023/02/17 18:18:12 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,12 @@ public:
 	e_type	getType(void) const;
 	void	convert(void);
 
-	bool	isImpossible(void) const;
+	bool	isImpossible(void);
+
+	void	printChar(void) const;
 };
 
 
+std::ostream& operator<<(std::ostream& out, const ScalarConverter& obj); 
 
 #endif

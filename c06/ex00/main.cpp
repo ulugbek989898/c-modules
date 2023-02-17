@@ -6,7 +6,7 @@
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 18:55:06 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/02/16 18:40:20 by uisroilo         ###   ########.fr       */
+/*   Updated: 2023/02/17 16:38:48 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	main(int argc, char *argv[]) {
 	{
 		obj1.setStr(argv[1]);
 		obj1.convert();
+		
+		std::cout << obj1;
 	}
 	catch(const std::exception& e)
 	{

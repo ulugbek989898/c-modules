@@ -6,7 +6,7 @@
 /*   By: uisroilo <uisroilo@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 20:21:47 by uisroilo          #+#    #+#             */
-/*   Updated: 2023/02/16 19:45:55 by uisroilo         ###   ########.fr       */
+/*   Updated: 2023/02/17 18:19:36 by uisroilo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void	ScalarConverter::setStr(std::string str) {
 		throw ConverterException();
 }
 
-bool	ScalarConverter::isImpossible(void) const {
+bool	ScalarConverter::isImpossible(void) {
 	try {
 		if (_type == INT)
 			_n = std::stoi(_str);
@@ -156,4 +156,16 @@ void	ScalarConverter::convert(void) {
 		default:
 			break;
 	}
+}
+
+void	ScalarConverter::printChar(void) const {
+	if (this->isLiteral() || (!std::isprint()))
+}
+
+std::ostream&    operator<<( std::ostream& out, const ScalarConverter& obj ) {
+    out << "char: "; obj.printChar();
+    out << "int: ";
+    out << "float: ";
+    out << "double: ";
+    return out;
 }
